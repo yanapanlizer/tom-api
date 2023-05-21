@@ -13,9 +13,9 @@ app.get('/', (req, res) => {
     res.send('hello world!!!')
 })
 
-app.get('/attractions', (req, res) => {
+app.get('/info', (req, res) => {
 connection.query(
-    'SELECT * FROM attractions',
+    'SELECT * FROM user',
     function(err, results, fields){
         console.log(results)
         res.send(results)
